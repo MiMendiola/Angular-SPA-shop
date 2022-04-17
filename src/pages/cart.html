@@ -1,0 +1,26 @@
+
+<div class="cart">
+    <div class="container">
+        <table class="cartTable">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        
+            <tr ng-repeat="(key,value) in data">
+                <td ng-bind="value.name"></td>
+                <td ng-bind="value.price | currency"></td>
+                <td ng-bind="value.qyn"></td>
+                <td><button type="button" class="btnCart" ng-click="deleteInfo(key,$event)">Delete</button>
+                </td>
+            </tr>
+        
+        </table>
+        
+        <h1>Total price is: {{totalPrice}}</h1><br>
+        <button class="btn">Pay Now</button>
+    </div>
+</div>
+
+
+

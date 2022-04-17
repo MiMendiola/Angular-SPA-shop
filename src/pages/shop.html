@@ -1,0 +1,23 @@
+
+<section class="shop">
+
+   <div class="heading">
+      <img src="../src/img/title-img.png" alt="">
+      <h3>our products</h3>
+   </div>
+ 
+   <div class="box-container">
+      <div class="box" ng-repeat="colonie in data | filter:id">
+         <img src="{{colonie.src}}" alt="">
+         <div class="content">
+            <div class="description">
+               {{colonie.description}}
+            </div>
+            <h3>{{colonie.name}}</h3>
+            <div class="price">${{colonie.price}}</div>
+            <a class="btn" ng-click="addCart(colonie.id-1)">add to cart</a>
+         </div>
+      </div>
+   </div>
+
+</section>

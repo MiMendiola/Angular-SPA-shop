@@ -1,0 +1,42 @@
+
+<!-- FORM LOGIN -->
+<div class="modal">
+    <div id="formLogin" class="modal_box">
+        <form action="">
+            
+            <h3>Login</h3>
+            <input class="box" type="text" ng-model="usernameLogin" placeholder="Username" required>
+            <input class="box" type="password" id="see" ng-model="passwordLogin" placeholder="Password" required><br>
+
+            <input type="checkbox" ng-click="showPass()"/>
+            <label class="text">show password</label><br>
+
+            <p>You don't have account? <button type="button" class="btnReg" ng-click="showRegister()">Register here</button></p><br>
+            <button class="btn" ng-click="keepInfoLogin()" type="submit">Login</button>
+            
+        </form>
+    </div>
+</div
+
+<!--FORM REGISTER-->
+<div class="modal">
+    <div id="formRegister" class="modal_box">
+        <form action="">
+            
+            <h3>Register</h3>
+            <input class="box" type="text" ng-model="username" placeholder="Username" required></br>
+            <input class="box" type="password" ng-model="passwordRegister" placeholder="Password" required><br>
+            <input class="box" type="text" ng-model="email" placeholder="Email" required><br>
+            <input class="box" type="text" ng-model="adress" placeholder="Adress" required><br>
+            <input class="box" type="text" ng-model="phone" placeholder="Phone Number" required><br>
+                        
+            <p>You have account? <button type="button" class="btnReg" ng-click="showLogin()">Login here</button></p><br>
+            <button class="btn" ng-click="keepInfoRegister()" type="submit">Register</button><br><br><br>
+            
+        </form>
+    </div>
+</div>
+
+<script>
+        
+</script>
