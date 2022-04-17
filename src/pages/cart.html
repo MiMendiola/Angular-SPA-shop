@@ -10,8 +10,8 @@
             <tr ng-repeat="(key,value) in data">
                 <td ng-bind="value.name"></td>
                 <td ng-bind="value.price | currency"></td>
-                <td ng-bind="value.qyn"></td>
-                <td><button type="button" class="btnCart" ng-click="deleteInfo(key,$event)">Delete</button>
+                <td>
+                    <button type="button" class="btnCart" ng-click="deleteInfo(key,$event)">Delete</button>
                 </td>
             </tr>
         

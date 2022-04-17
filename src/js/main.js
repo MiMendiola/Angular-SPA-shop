@@ -35,7 +35,8 @@ let finalProject = angular.module('MF_App', ['ngRoute']);
 // here we inicialice diferents variables for all the pages
 finalProject.run(function($rootScope){
     $rootScope.login_flag = false;
-
+    $rootScope.total_flag = false;
+    $rootScope.totalPrice = 0;
 });
 
 // configurating our navigation panel and his controllers
@@ -64,11 +65,12 @@ finalProject.controller('shop_ctrl', function($scope){
         let itemData = JSON.stringify($scope.item);
 
         sessionStorage.setItem('item',itemData);
+        $rootScope.total_flag = true;
     };
 });
 
 // controller for the login page
-finalProject.controller('login_ctrl', function($scope){
+finalProject.controller('login_ctrl', function($scope, $rootScope){
     $scope.usernameLogin = "";
     $scope.passwordLogin = "";
 
@@ -152,13 +154,12 @@ finalProject.controller('login_ctrl', function($scope){
         
 
 // controller for the cart page
-finalProject.controller('cart_ctrl', function($scope){
+finalProject.controller('cart_ctrl', function($scope, $rootScope){
     let seeData = JSON.parse(sessionStorage.getItem('item'));
     $scope.data = seeData;
-    $scope.totalPrice = 0;
 
     seeData.forEach(value => {
-        $scope.totalPrice = $scope.totalPrice + value.price;
+        $rootScope.totalPrice += value.price;
     });
     
     // IN PROGRESS

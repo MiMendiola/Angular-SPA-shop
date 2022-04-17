@@ -481,11 +481,12 @@ section{
          justify-content: center;
 
          th{
-            padding:1rem 0;
+            padding:1rem 1.5rem;
             @include title-text(2rem);
          }
       
          td{
+            padding:1rem 1.5rem;
             @include grap-text(1.5rem);
          }
 
